@@ -1,0 +1,37 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "proyecto_modelado"
+version = "0.0.1"
+description = "proyecto de la materia de laboratorio de modelado de datos"
+authors = [
+  { name = "JuanPabloArroyo_DiegoEduardoSincel_JoseManuelGarcia_DemienBecerra" },
+]
+
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    
+]
+dependencies = [
+    "pip",
+    "python-dotenv",
+    "ruff",
+]
+requires-python = "~=3.13.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["proyecto_modelado"]
+include = ["pyproject.toml", "proyecto_modelado/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["proyecto_modelado"]
+force-sort-within-sections = true
+
